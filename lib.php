@@ -35,7 +35,7 @@ function local_obu_apps_extends_navigation($navigation) {
 	}
 	
 	// BRISC
-	if (has_capability('moodle/blog:create', context_system::instance())) { // Only show if allowed
+	if ((get_config('local_obu_apps', 'showbrisc') == '1') && has_capability('moodle/blog:create', context_system::instance())) { // Only show if allowed
 		$nodeEmpskills = $nodeProfile->get('empskills'); // Parent ('get' faster than 'find')
 		if (!$nodeEmpskills) { // Add the parent if necessary
 			$nodeEmpskills = $nodeProfile->add(get_string('empskills', 'local_empskills'),
@@ -47,7 +47,7 @@ function local_obu_apps_extends_navigation($navigation) {
 	}
 	
 	// QuAK
-	if (!empty($CFG->navadduserpostslinks)) { // Only show if allowed
+	if ((get_config('local_obu_apps', 'showquak') == '1') && !empty($CFG->navadduserpostslinks)) { // Only show if allowed
 		$nodeForumPosts	= null;
 		$title = get_string('forumposts', 'mod_forum'); // The required node wasn't given a specific key so we must search for the title
 		$children = $nodeProfile->get_children_key_list();

@@ -16,21 +16,19 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Language strings
+ * OBU Apps - Brookes web app settings.
  *
  * @package    obu_apps
  * @category   local
- * @copyright  2015, Oxford Brookes University {@link http://www.brookes.ac.uk/}
+ * @copyright  2015, Oxford Brookes University
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['pluginname'] = 'obu_apps';
-$string['title'] = 'Brookes Web Apps';
+defined('MOODLE_INTERNAL') || die;
 
-$string['showbrisc'] = 'Show BRISC';
-$string['showbriscdesc'] = 'Show BRISC in the navigation block (default No) ';
-$string['showquak'] = 'Show QuAK';
-$string['showquakdesc'] = 'Show QuAK in the navigation block (default No) ';
-
-$string[''] = '';
-
+if ($hassiteconfig) {
+    $settings = new admin_settingpage(get_string('pluginname', 'local_obu_apps'), get_string('title', 'local_obu_apps'));
+    $ADMIN->add('localplugins', $settings);
+	$settings->add(new admin_setting_configcheckbox('local_obu_apps/showbrisc', get_string('showbrisc', 'local_obu_apps'), get_string('showbriscdesc', 'local_obu_apps'), '0'));
+	$settings->add(new admin_setting_configcheckbox('local_obu_apps/showquak', get_string('showquak', 'local_obu_apps'), get_string('showquakdesc', 'local_obu_apps'), '0'));
+}
