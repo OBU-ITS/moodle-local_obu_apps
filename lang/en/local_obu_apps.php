@@ -27,6 +27,7 @@
 $string['pluginname'] = 'obu_apps';
 $string['title'] = 'Brookes Web Apps';
 
+$string['apps'] = 'Brookes apps';
 $string['showbrisc'] = 'Show BRISC';
 $string['showbriscdesc'] = 'Show BRISC in the navigation block (default No) ';
 $string['showquak'] = 'Show QuAK';

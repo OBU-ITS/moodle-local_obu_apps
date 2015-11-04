@@ -14,7 +14,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * OBU Apps - version
+ * OBU Apps - Version
  *
  * @package    obu_apps
  * @category   local
@@ -24,7 +24,7 @@
  *
  */
 
-$plugin->version  = 2015110200;   // The (date) version of this module + 2 extra digital for daily versions
+$plugin->version  = 2015110401;   // The (date) version of this module + 2 extra digital for daily versions
                                   // This version number is displayed into /admin/forms.php
                                   // TODO: if ever this plugin get branched, the old branch number
                                   // will not be updated to the current date but just incremented. We will

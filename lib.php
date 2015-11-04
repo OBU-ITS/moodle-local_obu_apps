@@ -28,38 +28,27 @@
 function local_obu_apps_extends_navigation($navigation) {
     global $CFG;
 
-	// The required grandparent node must already exist
-	$nodeProfile = $navigation->find('myprofile', navigation_node::TYPE_UNKNOWN);
-	if (!$nodeProfile) {
-		return;
-	}
+	// Find the 'apps' node
+	$nodeApps = $navigation->find(get_string('apps', 'local_obu_apps'), navigation_node::TYPE_SYSTEM);
 	
-	// BRISC
-	if ((get_config('local_obu_apps', 'showbrisc') == '1') && has_capability('moodle/blog:create', context_system::instance())) { // Only show if allowed
-		$nodeEmpskills = $nodeProfile->get('empskills', navigation_node::TYPE_UNKNOWN); // Parent ('get' faster than 'find')
-		if (!$nodeEmpskills) { // Add the parent if necessary
-			$nodeEmpskills = $nodeProfile->add(get_string('empskills', 'local_empskills'),
-				null, TYPE_CUSTOM, null, 'empskills', null); // The 'key' is 'empskills'
-		}
-		if ($nodeEmpskills) {
-			$nodeEmpskills->add('BRISC', '/local/obu_apps/brisc.php'); // BRISC web app
+	// If necessary, add the 'apps' node to 'home'
+	if (!$nodeApps) {
+		$nodeHome = $navigation->children->get('1')->parent;
+		if ($nodeHome) {
+			$nodeApps = $nodeHome->add(get_string('apps', 'local_obu_apps'), null, navigation_node::TYPE_SYSTEM);
 		}
 	}
 	
-	// QuAK
-	if ((get_config('local_obu_apps', 'showquak') == '1') && !empty($CFG->navadduserpostslinks)) { // Only show if allowed
-		$nodeForumPosts	= null;
-		$title = get_string('forumposts', 'mod_forum'); // The required node wasn't given a specific key so we must search for the title
-		$children = $nodeProfile->get_children_key_list();
-		foreach ($children as $child) {
-			$node = $nodeProfile->get($child);
-			if ($node->get_content() == $title) {
-				$nodeForumPosts	= $node;
-				break;
-			}				
+	if ($nodeApps) {
+		
+		// BRISC
+		if ((get_config('local_obu_apps', 'showbrisc') == '1') && has_capability('moodle/blog:create', context_system::instance())) {
+			$nodeApps->add('BRISC', '/local/obu_apps/brisc.php'); // BRISC web app
 		}
-		if ($nodeForumPosts) {
-			$nodeForumPosts->add('QuAK', '/local/obu_apps/quak.php'); // QuAK web app
+	
+		// QuAK
+		if ((get_config('local_obu_apps', 'showquak') == '1') && !empty($CFG->navadduserpostslinks)) {
+			$nodeApps->add('QuAK', '/local/obu_apps/quak.php'); // QuAK web app
 		}
 	}
 }
