@@ -32,6 +32,8 @@ $string['showbrisc'] = 'Show BRISC';
 $string['showbriscdesc'] = 'Show BRISC in the navigation block (default No) ';
 $string['showquak'] = 'Show QuAK';
 $string['showquakdesc'] = 'Show QuAK in the navigation block (default No) ';
+$string['showpolls'] = 'Show Polls';
+$string['showpollsdesc'] = 'Show Polls in the navigation block (default No) ';
 
 $string[''] = '';
 

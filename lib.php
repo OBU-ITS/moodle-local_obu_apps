@@ -50,5 +50,10 @@ function local_obu_apps_extends_navigation($navigation) {
 		if ((get_config('local_obu_apps', 'showquak') == '1') && !empty($CFG->navadduserpostslinks)) {
 			$nodeApps->add('QuAK', '/local/obu_apps/quak.php'); // QuAK web app
 		}
+		
+		// Polls
+		if (get_config('local_obu_apps', 'showpolls') == '1') {
+			$nodeApps->add('Polls', '/local/obu_apps/polls.php'); // Polls web app
+		}
 	}
 }

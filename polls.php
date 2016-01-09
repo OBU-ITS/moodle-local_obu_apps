@@ -1,5 +1,4 @@
 <?php
-
 // This file is part of Moodle - http://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
@@ -16,7 +15,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * OBU Apps - Brookes web app settings.
+ * OBU Apps - Polls web app host page.
  *
  * @package    obu_apps
  * @category   local
@@ -24,12 +23,35 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-defined('MOODLE_INTERNAL') || die;
+require_once('../../config.php');
 
-if ($hassiteconfig) {
-    $settings = new admin_settingpage(get_string('pluginname', 'local_obu_apps'), get_string('title', 'local_obu_apps'));
-    $ADMIN->add('localplugins', $settings);
-	$settings->add(new admin_setting_configcheckbox('local_obu_apps/showbrisc', get_string('showbrisc', 'local_obu_apps'), get_string('showbriscdesc', 'local_obu_apps'), '0'));
-	$settings->add(new admin_setting_configcheckbox('local_obu_apps/showquak', get_string('showquak', 'local_obu_apps'), get_string('showquakdesc', 'local_obu_apps'), '0'));
-	$settings->add(new admin_setting_configcheckbox('local_obu_apps/showpolls', get_string('showpolls', 'local_obu_apps'), get_string('showpollsdesc', 'local_obu_apps'), '0'));
+require_login();
+$context = context_system::instance();
+
+$url = new moodle_url('/local/obu_apps/polls.php');
+$launch = 'https://polls.brookes.ac.uk/';
+if (isset($_REQUEST['poll'])) { // A request for a specific poll
+	$url .= '?poll=' . $_REQUEST['poll'];
+	$launch .= '#/poll/' . $_REQUEST['poll'];
 }
+$heading = 'Brookes Polls';
+
+$PAGE->set_url($url);
+$PAGE->set_pagelayout('standard');
+$PAGE->set_context($context);
+$PAGE->set_title($heading);
+$PAGE->set_heading($heading);
+
+// The page contents
+echo $OUTPUT->header();
+
+echo '<center><iframe src="' . $launch . '" width="480" height="680"></iframe></center>';
+
+?>
+<h3>Brookes Polls</h3>
+Take part in an online poll.
+<?php
+
+echo $OUTPUT->footer();
+
+
