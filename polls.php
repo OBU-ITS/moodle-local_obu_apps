@@ -45,7 +45,7 @@ $PAGE->set_heading($heading);
 // The page contents
 echo $OUTPUT->header();
 
-echo '<center><iframe src="' . $launch . '" width="480" height="680"></iframe></center>';
+echo '<center><iframe src="' . $launch . '" width="' . get_config('local_obu_apps', 'iframewidth'). '" height="' . get_config('local_obu_apps', 'iframeheight') . '"></iframe></center>';
 
 ?>
 <h3>Brookes Polls</h3>

@@ -28,12 +28,20 @@ $string['pluginname'] = 'obu_apps';
 $string['title'] = 'Brookes Web Apps';
 
 $string['apps'] = 'Brookes apps';
+$string['iframeheight'] = 'iFrame height (in pixels)';
+$string['iframeheightexplain'] = 'Specifies height of iFrames.';
+$string['iframewidth'] = 'iFrame width (in pixels)';
+$string['iframewidthexplain'] = 'Specifies width of iFrames.';
+$string['popupheight'] = 'Pop-up height (in pixels)';
+$string['popupheightexplain'] = 'Specifies height of popup windows.';
+$string['popupwidth'] = 'Pop-up width (in pixels)';
+$string['popupwidthexplain'] = 'Specifies width of popup windows.';
 $string['showbrisc'] = 'Show BRISC';
-$string['showbriscdesc'] = 'Show BRISC in the navigation block (default No) ';
+$string['showbriscexplain'] = 'Show BRISC in the navigation block (default No) ';
 $string['showquak'] = 'Show QuAK';
-$string['showquakdesc'] = 'Show QuAK in the navigation block (default No) ';
+$string['showquakexplain'] = 'Show QuAK in the navigation block (default No) ';
 $string['showpolls'] = 'Show Polls';
-$string['showpollsdesc'] = 'Show Polls in the navigation block (default No) ';
+$string['showpollsexplain'] = 'Show Polls in the navigation block (default No) ';
 
 $string[''] = '';
 

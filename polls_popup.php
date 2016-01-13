@@ -23,11 +23,18 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
+require_once('../../config.php');
+
+require_login();
+
 if (isset($_REQUEST['poll'])) {
 	$poll = $_REQUEST['poll'];
 } else {
 	$poll = '';
 }
+
+$popupwidth = get_config('local_obu_apps', 'popupwidth');
+$popupheight = get_config('local_obu_apps', 'popupheight');
 
 ?>
 <!DOCTYPE html>
@@ -40,11 +47,14 @@ if (isset($_REQUEST['poll'])) {
 <body>
     <script type="text/javascript">
 		var poll = "<?php echo $poll; ?>";
+		var popupwidth = "<?php echo $popupwidth; ?>";
+		var popupheight = "<?php echo $popupheight; ?>";
 		var launch = "https://polls.brookes.ac.uk/";
 		if (poll != "") {
 			launch += "#/poll/" + poll;
 		}
-		var popup = window.open(launch, "_blank", "width=480, height=640, location=no, menubar=no, status=no, titlebar=no, toolbar=no"); // Open a new tab for the app
+		var popupoptions = "width=" + popupwidth + ", height=" + popupheight + ", location=no, menubar=no, status=no, titlebar=no, toolbar=no";
+		var popup = window.open(launch, "_blank", popupoptions); // Open a new tab for the app
 		if (!popup || popup.closed || (typeof popup.closed == "undefined")) { // No popups allowed?
 			window.location = launch; // Reuse the old tab
 		} else {

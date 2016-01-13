@@ -29,7 +29,11 @@ defined('MOODLE_INTERNAL') || die;
 if ($hassiteconfig) {
     $settings = new admin_settingpage(get_string('pluginname', 'local_obu_apps'), get_string('title', 'local_obu_apps'));
     $ADMIN->add('localplugins', $settings);
-	$settings->add(new admin_setting_configcheckbox('local_obu_apps/showbrisc', get_string('showbrisc', 'local_obu_apps'), get_string('showbriscdesc', 'local_obu_apps'), '0'));
-	$settings->add(new admin_setting_configcheckbox('local_obu_apps/showquak', get_string('showquak', 'local_obu_apps'), get_string('showquakdesc', 'local_obu_apps'), '0'));
-	$settings->add(new admin_setting_configcheckbox('local_obu_apps/showpolls', get_string('showpolls', 'local_obu_apps'), get_string('showpollsdesc', 'local_obu_apps'), '0'));
+    $settings->add(new admin_setting_configtext('local_obu_apps/iframewidth', get_string('iframewidth', 'local_obu_apps'), get_string('iframewidthexplain', 'local_obu_apps'), 360, PARAM_INT, 7));
+    $settings->add(new admin_setting_configtext('local_obu_apps/iframeheight', get_string('iframeheight', 'local_obu_apps'), get_string('iframeheightexplain', 'local_obu_apps'), 640, PARAM_INT, 7));
+    $settings->add(new admin_setting_configtext('local_obu_apps/popupwidth', get_string('popupwidth', 'local_obu_apps'), get_string('popupwidthexplain', 'local_obu_apps'), 360, PARAM_INT, 7));
+    $settings->add(new admin_setting_configtext('local_obu_apps/popupheight', get_string('popupheight', 'local_obu_apps'), get_string('popupheightexplain', 'local_obu_apps'), 640, PARAM_INT, 7));
+	$settings->add(new admin_setting_configcheckbox('local_obu_apps/showbrisc', get_string('showbrisc', 'local_obu_apps'), get_string('showbriscexplain', 'local_obu_apps'), '0'));
+	$settings->add(new admin_setting_configcheckbox('local_obu_apps/showquak', get_string('showquak', 'local_obu_apps'), get_string('showquakexplain', 'local_obu_apps'), '0'));
+	$settings->add(new admin_setting_configcheckbox('local_obu_apps/showpolls', get_string('showpolls', 'local_obu_apps'), get_string('showpollsexplain', 'local_obu_apps'), '0'));
 }
