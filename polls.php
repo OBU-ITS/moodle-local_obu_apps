@@ -48,8 +48,23 @@ echo $OUTPUT->header();
 echo '<center><iframe src="' . $launch . '" width="' . get_config('local_obu_apps', 'iframewidth'). '" height="' . get_config('local_obu_apps', 'iframeheight') . '"></iframe></center>';
 
 ?>
-<h3>Brookes Polls</h3>
-Take part in an online poll.
+<h3>polls.brookes</h3>
+
+The polls.brookes app allows Oxford Brookes staff and students to participate in online polls.  Currently, new polls can only be designed and controlled by staff members.<p />
+It’s really good looking and easy to use on any device.
+
+<h4>Joining a poll</h4>
+
+Enter the poll number that you see in the Moodle activity for the poll and Submit.
+
+<h4>Participating in a poll</h4>
+<ul>
+  <li>All votes are anonymous.</li>
+  <li>You may be able to vote more than once on the same question.</li>
+  <li>The poll may consist of one or more questions. If it does then the poll will be moved to the next question remotely by the person who created the poll.</li>
+  <li>The poll will be opened and closed remotely by the person who created the poll.</li>
+  <li>The person running the poll can share live voting results with the audience or may choose not to share until all of the votes are in.</li>
+</ul>
 <?php
 
 echo $OUTPUT->footer();

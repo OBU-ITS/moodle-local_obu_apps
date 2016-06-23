@@ -28,6 +28,10 @@
 function local_obu_apps_extends_navigation($navigation) {
     global $CFG;
 
+	if (!isloggedin() || isguestuser()) {
+		return;
+	}
+	
 	// Find the 'apps' node
 	$nodeApps = $navigation->find(get_string('apps', 'local_obu_apps'), navigation_node::TYPE_SYSTEM);
 	
@@ -53,7 +57,7 @@ function local_obu_apps_extends_navigation($navigation) {
 		
 		// Polls
 		if (get_config('local_obu_apps', 'showpolls') == '1') {
-			$nodeApps->add('Polls', '/local/obu_apps/polls.php'); // Polls web app
+			$nodeApps->add('polls.brookes', '/local/obu_apps/polls.php'); // Polls web app
 		}
 	}
 }
