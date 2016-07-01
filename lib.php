@@ -25,7 +25,7 @@
  */
 
 
-function local_obu_apps_extends_navigation($navigation) {
+function local_obu_apps_extend_navigation($navigation) {
     global $CFG;
 
 	if (!isloggedin() || isguestuser()) {
