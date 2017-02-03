@@ -38,10 +38,16 @@ $string['popupwidth'] = 'Pop-up width (in pixels)';
 $string['popupwidthexplain'] = 'Specifies width of popup windows.';
 $string['showbrisc'] = 'Show BRISC';
 $string['showbriscexplain'] = 'Show BRISC in the navigation block (default No) ';
+$string['describebrisc'] = 'Describe BRISC';
 $string['showquak'] = 'Show QuAK';
 $string['showquakexplain'] = 'Show QuAK in the navigation block (default No) ';
+$string['describequak'] = 'Describe QuAK';
 $string['showpolls'] = 'Show Polls';
 $string['showpollsexplain'] = 'Show Polls in the navigation block (default No) ';
+$string['describepolls'] = 'Describe Polls';
+$string['showbrookesid'] = 'Show Brookes ID';
+$string['showbrookesidexplain'] = 'Show Brookes ID in the navigation block (default No) ';
+$string['describebrookesid'] = 'Describe Brookes ID';
 
 $string[''] = '';
 

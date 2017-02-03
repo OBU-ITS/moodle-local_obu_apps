@@ -43,14 +43,7 @@ echo $OUTPUT->header();
 
 echo '<center><iframe src="' . $launch . '" width="' . get_config('local_obu_apps', 'iframewidth'). '" height="' . get_config('local_obu_apps', 'iframeheight') . '"></iframe></center>';
 
-?>
-<h3>Questions, Answers, Knowledge</h3>
-This web and mobile app was developed by OBIS-IS and is based on an original idea by student Tom Wilford for use by our current students.<br />
-The app allows students to ask questions in lectures (anonymously or non-anonymously) and allows their lecturers or other students to provide answers to these questions.
-<h4>Get the Mobile App</h4>
-<p><a href="https://play.google.com/store/apps/details?id=uk.ac.brookes.questions" target="_blank"><img src="images/android.png" alt="Android Mobiles"></a></p>
-<p><a href="https://itunes.apple.com/gb/app/quak/id966528398?mt=8" target="_blank"><img src="images/ios.png" alt="Apple Mobiles"></a></p>
-<?php
+echo get_config('local_obu_apps', 'describequak');
 
 echo $OUTPUT->footer();
 

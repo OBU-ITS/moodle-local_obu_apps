@@ -34,6 +34,11 @@ if ($hassiteconfig) {
     $settings->add(new admin_setting_configtext('local_obu_apps/popupwidth', get_string('popupwidth', 'local_obu_apps'), get_string('popupwidthexplain', 'local_obu_apps'), 360, PARAM_INT, 7));
     $settings->add(new admin_setting_configtext('local_obu_apps/popupheight', get_string('popupheight', 'local_obu_apps'), get_string('popupheightexplain', 'local_obu_apps'), 640, PARAM_INT, 7));
 	$settings->add(new admin_setting_configcheckbox('local_obu_apps/showbrisc', get_string('showbrisc', 'local_obu_apps'), get_string('showbriscexplain', 'local_obu_apps'), '0'));
+	$settings->add(new admin_setting_confightmleditor('local_obu_apps/describebrisc', get_string('describebrisc', 'local_obu_apps'), '', '<h3>Brookes Individual Skills Catcher</h3>'));
 	$settings->add(new admin_setting_configcheckbox('local_obu_apps/showquak', get_string('showquak', 'local_obu_apps'), get_string('showquakexplain', 'local_obu_apps'), '0'));
+	$settings->add(new admin_setting_confightmleditor('local_obu_apps/describequak', get_string('describequak', 'local_obu_apps'), '', '<h3>Questions, Answers, Knowledge</h3>'));
 	$settings->add(new admin_setting_configcheckbox('local_obu_apps/showpolls', get_string('showpolls', 'local_obu_apps'), get_string('showpollsexplain', 'local_obu_apps'), '0'));
+	$settings->add(new admin_setting_confightmleditor('local_obu_apps/describepolls', get_string('describepolls', 'local_obu_apps'), '', '<h3>polls.brookes</h3>'));
+	$settings->add(new admin_setting_configcheckbox('local_obu_apps/showbrookesid', get_string('showbrookesid', 'local_obu_apps'), get_string('showbrookesidexplain', 'local_obu_apps'), '0'));
+	$settings->add(new admin_setting_confightmleditor('local_obu_apps/describebrookesid', get_string('describebrookesid', 'local_obu_apps'), '', '<h3>Brookes Individual Development</h3>'));
 }

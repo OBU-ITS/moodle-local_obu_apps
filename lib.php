@@ -59,5 +59,10 @@ function local_obu_apps_extend_navigation($navigation) {
 		if (get_config('local_obu_apps', 'showpolls') == '1') {
 			$nodeApps->add('polls.brookes', '/local/obu_apps/polls.php'); // Polls web app
 		}
+		
+		// Brookes ID
+		if (get_config('local_obu_apps', 'showbrookesid') == '1') {
+			$nodeApps->add('Brookes ID', '/local/obu_apps/brookesid.php'); // Brookes ID web app
+		}
 	}
 }

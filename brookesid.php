@@ -15,11 +15,11 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * OBU Apps - BRISC web app host page.
+ * OBU Apps - Brookes ID web app host page.
  *
  * @package    obu_apps
  * @category   local
- * @copyright  2015, Oxford Brookes University
+ * @copyright  2017, Oxford Brookes University
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -27,11 +27,10 @@ require_once('../../config.php');
 
 require_login();
 $context = context_system::instance();
-require_capability('moodle/blog:create', $context);
 
-$url = new moodle_url('/local/obu_apps/brisc.php');
-$launch = new moodle_url('/local/obu_apps/launch.php?app=brisc&service=empskill_ws');
-$heading = 'BRISC';
+$url = new moodle_url('/local/obu_apps/brookesid.php');
+$launch = new moodle_url('/local/obu_apps/launch.php?app=brookesid&service=brookesid_ws');
+$heading = 'Brookes ID';
 
 $PAGE->set_url($url);
 $PAGE->set_pagelayout('standard');
@@ -44,7 +43,7 @@ echo $OUTPUT->header();
 
 echo '<center><iframe src="' . $launch . '" width="' . get_config('local_obu_apps', 'iframewidth'). '" height="' . get_config('local_obu_apps', 'iframeheight') . '"></iframe></center>';
 
-echo get_config('local_obu_apps', 'describebrisc');
+echo get_config('local_obu_apps', 'describebrookesid');
 
 echo $OUTPUT->footer();
 
