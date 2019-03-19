@@ -24,6 +24,8 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
+$string['privacy:metadata'] = 'The OBU Apps plugin just provides an interface for Brookes web apps and does not itself store any personal data.';
+
 $string['pluginname'] = 'obu_apps';
 $string['title'] = 'Brookes Web Apps';
 
