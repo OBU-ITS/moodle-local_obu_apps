@@ -20,7 +20,7 @@
  *
  * @package    obu_apps
  * @category   local
- * @copyright  2015, Oxford Brookes University {@link http://www.brookes.ac.uk/}
+ * @copyright  2019, Oxford Brookes University {@link http://www.brookes.ac.uk/}
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -32,37 +32,9 @@ function local_obu_apps_extend_navigation($navigation) {
 		return;
 	}
 	
-	// Find the 'apps' node
-	$nodeApps = $navigation->find(get_string('apps', 'local_obu_apps'), navigation_node::TYPE_SYSTEM);
-	
-	// If necessary, add the 'apps' node to 'home'
-	if (!$nodeApps) {
-		$nodeHome = $navigation->children->get('1')->parent;
-		if ($nodeHome) {
-			$nodeApps = $nodeHome->add(get_string('apps', 'local_obu_apps'), null, navigation_node::TYPE_SYSTEM);
-		}
-	}
-	
-	if ($nodeApps) {
-		
-		// BRISC
-		if ((get_config('local_obu_apps', 'showbrisc') == '1') && has_capability('moodle/blog:create', context_system::instance())) {
-			$nodeApps->add('BRISC', '/local/obu_apps/brisc.php'); // BRISC web app
-		}
-	
-		// QuAK
-		if ((get_config('local_obu_apps', 'showquak') == '1') && !empty($CFG->navadduserpostslinks)) {
-			$nodeApps->add('QuAK', '/local/obu_apps/quak.php'); // QuAK web app
-		}
-		
-		// Polls
-		if (get_config('local_obu_apps', 'showpolls') == '1') {
-			$nodeApps->add('polls.brookes', '/local/obu_apps/polls.php'); // Polls web app
-		}
-		
-		// Brookes ID
-		if (get_config('local_obu_apps', 'showbrookesid') == '1') {
-			$nodeApps->add('Brookes ID', '/local/obu_apps/brookesid.php'); // Brookes ID web app
-		}
-	}
+	$nodeHome = $navigation->children->get('1')->parent;
+	$node = $nodeHome->add(get_string('apps', 'local_obu_apps'), '/local/obu_apps/menu.php', navigation_node::TYPE_SYSTEM);
+	$node->showinflatnavigation = true;
+
+	return;
 }
