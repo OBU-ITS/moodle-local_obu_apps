@@ -44,7 +44,7 @@ echo $OUTPUT->header();
 
 echo '<center><iframe src="' . $launch . '" width="' . get_config('local_obu_apps', 'iframewidth'). '" height="' . get_config('local_obu_apps', 'iframeheight') . '"></iframe></center>';
 
-echo get_config('local_obu_apps', 'describebrisc');
+echo get_config('local_obu_apps', 'describebrookesedge');
 
 echo $OUTPUT->footer();
 
