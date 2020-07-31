@@ -20,7 +20,7 @@
  *
  * @package    obu_apps
  * @category   local
- * @copyright  2016, Oxford Brookes University
+ * @copyright  2020, Oxford Brookes University
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -41,4 +41,6 @@ if ($hassiteconfig) {
 	$settings->add(new admin_setting_confightmleditor('local_obu_apps/describepolls', get_string('describepolls', 'local_obu_apps'), '', '<h3>polls.brookes</h3>'));
 	$settings->add(new admin_setting_configcheckbox('local_obu_apps/showbrookesid', get_string('showbrookesid', 'local_obu_apps'), get_string('showbrookesidexplain', 'local_obu_apps'), '0'));
 	$settings->add(new admin_setting_confightmleditor('local_obu_apps/describebrookesid', get_string('describebrookesid', 'local_obu_apps'), '', '<h3>Brookes Individual Development</h3>'));
+	$settings->add(new admin_setting_configcheckbox('local_obu_apps/showbrookesedge', get_string('showbrookesedge', 'local_obu_apps'), get_string('showbrookesedgeexplain', 'local_obu_apps'), '0'));
+	$settings->add(new admin_setting_confightmleditor('local_obu_apps/describebrookesedge', get_string('describebrookesedge', 'local_obu_apps'), '', '<h3>Brookes EDGE</h3>'));
 }

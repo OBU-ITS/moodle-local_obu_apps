@@ -20,7 +20,7 @@
  *
  * @package    obu_apps
  * @category   local
- * @copyright  2015, Oxford Brookes University {@link http://www.brookes.ac.uk/}
+ * @copyright  2020, Oxford Brookes University {@link http://www.brookes.ac.uk/}
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -50,6 +50,9 @@ $string['describepolls'] = 'Describe Polls';
 $string['showbrookesid'] = 'Show Brookes ID';
 $string['showbrookesidexplain'] = 'Show Brookes ID in the navigation block (default No) ';
 $string['describebrookesid'] = 'Describe Brookes ID';
+$string['showbrookesedge'] = 'Show BrookesEDGE';
+$string['showbrookesedgeexplain'] = 'Show BrookesEDGE in the navigation block (default No) ';
+$string['describebrookesedge'] = 'Describe BrookesEDGE';
 
 $string[''] = '';
 

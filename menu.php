@@ -15,7 +15,7 @@
  *
  * @package    obu_apps
  * @category   local
- * @copyright  2019, Oxford Brookes University {@link http://www.brookes.ac.uk/}
+ * @copyright  2020, Oxford Brookes University {@link http://www.brookes.ac.uk/}
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -61,6 +61,12 @@ if (get_config('local_obu_apps', 'showpolls') == '1') {
 if (get_config('local_obu_apps', 'showbrookesid') == '1') {
 	$url = $dir . 'brookesid.php';
 	echo '<h4><a href="' . $url . '">Brookes ID</a></h4>';
+}
+		
+// BrookesEDGE
+if (get_config('local_obu_apps', 'showbrookesedge') == '1') {
+	$url = $dir . 'brookesedge.php';
+	echo '<h4><a href="' . $url . '">BrookesEDGE</a></h4>';
 }
 
 echo $OUTPUT->footer();
