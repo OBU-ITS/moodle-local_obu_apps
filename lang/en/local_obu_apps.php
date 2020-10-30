@@ -24,12 +24,13 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['privacy:metadata'] = 'The OBU Apps plugin just provides an interface for Brookes web apps and does not itself store any personal data.';
+$string['privacy:metadata'] = 'The OBU Apps plugin just provides an interface for Brookes apps and does not itself store any personal data.';
 
 $string['pluginname'] = 'obu_apps';
-$string['title'] = 'Brookes Web Apps';
+$string['title'] = 'Brookes Apps';
 
 $string['apps'] = 'Brookes apps';
+
 $string['iframeheight'] = 'iFrame height (in pixels)';
 $string['iframeheightexplain'] = 'Specifies height of iFrames.';
 $string['iframewidth'] = 'iFrame width (in pixels)';
@@ -38,21 +39,34 @@ $string['popupheight'] = 'Pop-up height (in pixels)';
 $string['popupheightexplain'] = 'Specifies height of popup windows.';
 $string['popupwidth'] = 'Pop-up width (in pixels)';
 $string['popupwidthexplain'] = 'Specifies width of popup windows.';
+
 $string['showbrisc'] = 'Show BRISC';
 $string['showbriscexplain'] = 'Show BRISC in the navigation block (default No) ';
 $string['describebrisc'] = 'Describe BRISC';
-$string['showquak'] = 'Show QuAK';
-$string['showquakexplain'] = 'Show QuAK in the navigation block (default No) ';
-$string['describequak'] = 'Describe QuAK';
-$string['showpolls'] = 'Show Polls';
-$string['showpollsexplain'] = 'Show Polls in the navigation block (default No) ';
-$string['describepolls'] = 'Describe Polls';
-$string['showbrookesid'] = 'Show Brookes ID';
-$string['showbrookesidexplain'] = 'Show Brookes ID in the navigation block (default No) ';
-$string['describebrookesid'] = 'Describe Brookes ID';
+
 $string['showbrookesedge'] = 'Show BrookesEDGE';
 $string['showbrookesedgeexplain'] = 'Show BrookesEDGE in the navigation block (default No) ';
 $string['describebrookesedge'] = 'Describe BrookesEDGE';
+
+$string['showbrookesid'] = 'Show Brookes ID';
+$string['showbrookesidexplain'] = 'Show Brookes ID in the navigation block (default No) ';
+$string['describebrookesid'] = 'Describe Brookes ID';
+
+$string['shownextbus'] = 'Show Nextbus';
+$string['shownextbusexplain'] = 'Show Nextbus in the navigation block (default No) ';
+$string['describenextbus'] = 'Describe Nextbus';
+
+$string['showpcfinder'] = 'Show PC Finder';
+$string['showpcfinderexplain'] = 'Show PC Finder in the navigation block (default No) ';
+$string['describepcfinder'] = 'Describe PC Finder';
+
+$string['showquak'] = 'Show QuAK';
+$string['showquakexplain'] = 'Show QuAK in the navigation block (default No) ';
+$string['describequak'] = 'Describe QuAK';
+
+$string['showpolls'] = 'Show Polls';
+$string['showpollsexplain'] = 'Show Polls in the navigation block (default No) ';
+$string['describepolls'] = 'Describe Polls';
 
 $string[''] = '';
 

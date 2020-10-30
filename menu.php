@@ -44,6 +44,30 @@ if ((get_config('local_obu_apps', 'showbrisc') == '1') && has_capability('moodle
 	$url = $dir . 'brisc.php';
 	echo '<h4><a href="' . $url . '">BRISC</a></h4>';
 }
+		
+// BrookesEDGE
+if (get_config('local_obu_apps', 'showbrookesedge') == '1') {
+	$url = $dir . 'brookesedge.php';
+	echo '<h4><a href="' . $url . '">BrookesEDGE</a></h4>';
+}
+		
+// Brookes ID
+if (get_config('local_obu_apps', 'showbrookesid') == '1') {
+	$url = $dir . 'brookesid.php';
+	echo '<h4><a href="' . $url . '">Brookes ID</a></h4>';
+}
+	
+// Nextbus
+if ((get_config('local_obu_apps', 'shownextbus') == '1') && !empty($CFG->navadduserpostslinks)) {
+	$url = $dir . 'nextbus.php';
+	echo '<h4><a href="' . $url . '">Nextbus</a></h4>';
+}
+	
+// PC Finder
+if ((get_config('local_obu_apps', 'showpcfinder') == '1') && !empty($CFG->navadduserpostslinks)) {
+	$url = $dir . 'pcfinder.php';
+	echo '<h4><a href="' . $url . '">PC Finder</a></h4>';
+}
 	
 // QuAK
 if ((get_config('local_obu_apps', 'showquak') == '1') && !empty($CFG->navadduserpostslinks)) {
@@ -55,18 +79,6 @@ if ((get_config('local_obu_apps', 'showquak') == '1') && !empty($CFG->navadduser
 if (get_config('local_obu_apps', 'showpolls') == '1') {
 	$url = $dir . 'polls.php';
 	echo '<h4><a href="' . $url . '">polls.brookes</a></h4>';
-}
-		
-// Brookes ID
-if (get_config('local_obu_apps', 'showbrookesid') == '1') {
-	$url = $dir . 'brookesid.php';
-	echo '<h4><a href="' . $url . '">Brookes ID</a></h4>';
-}
-		
-// BrookesEDGE
-if (get_config('local_obu_apps', 'showbrookesedge') == '1') {
-	$url = $dir . 'brookesedge.php';
-	echo '<h4><a href="' . $url . '">BrookesEDGE</a></h4>';
 }
 
 echo $OUTPUT->footer();
